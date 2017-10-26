@@ -1,3 +1,3 @@
 # music-data
 process music data
-testtest
+pip install -r requirments.txt
