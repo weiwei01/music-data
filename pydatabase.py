@@ -3,7 +3,7 @@
 import pymysql
  
 # open db connect
-db = pymysql.connect("localhost","root","12qwaszx","musicdb" )
+db = pymysql.connect("140.116.96.199","phpmyadmin","12qwaszx","musicdb" )
  
 # use cursor() method to create an object
 cursor = db.cursor()
