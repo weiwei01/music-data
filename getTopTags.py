@@ -1,7 +1,7 @@
 #getTopTags
 import pydbfunction
 import pylast
-
+import parsetoptag
 # You have to have your own unique two values for API_KEY and API_SECRET
 # Obtain yours from https://www.last.fm/api/account/create for Last.fm
 API_KEY = "77e3d0a89b1d9d58d18ac1cbedab9d1f"  # this is a sample key
@@ -39,7 +39,7 @@ for record in result:
 	print toptags
 	#update sql
 	update = ("""UPDATE rawtable2 SET toptags=%s WHERE indexing=%s""")
-	data = ("123", record[1])
+	data = (toptags, record[1])
 	db = pydbfunction.MyDBTest()
 	db.updateData(update, data)
 	exit(0)
