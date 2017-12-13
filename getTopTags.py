@@ -37,9 +37,10 @@ for record in result:
 	print(track)
 	print len(toptags)
 	print toptags
+	parsetoptag.parseTopTags(toptags)
 	#update sql
-	update = ("""UPDATE rawtable2 SET toptags=%s WHERE indexing=%s""")
-	data = (toptags, record[1])
-	db = pydbfunction.MyDBTest()
-	db.updateData(update, data)
+	#update = ("""UPDATE rawtable2 SET toptags=%s WHERE indexing=%s""")
+	#data = (toptags, record[1])
+	#db = pydbfunction.MyDBTest()
+	#db.updateData(update, data)
 	exit(0)
