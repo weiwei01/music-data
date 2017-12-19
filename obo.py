@@ -82,6 +82,7 @@ stopwords += ['whoever', 'whole', 'whom', 'whose', 'why', 'will', 'with']
 stopwords += ['within', 'without', 'would', 'yet', 'you', 'your']
 stopwords += ['yours', 'yourself', 'yourselves']
 #http://ir.dcs.gla.ac.uk/resources/linguistic_utils/stop_words
+stopwords += ['m', 't']
 
 # Given a list of words, remove any that are
 # in a list of stop words.
