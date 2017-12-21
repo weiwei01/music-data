@@ -4,18 +4,18 @@ import pymysql
 
 class MyDBTest():
 
-    def __init__(self):
+	def __init__(self):
         try:
             self.con = pymysql.connect("localhost","phpmyadmin","12qwaszx","musicdb" )
             self.cur = self.con.cursor()
-	    #self.show_version()
-        except :
-            print "Connection Error"
-            sys.exit(1)
+		#self.show_version()
+        except:
+		  print ("Connection Error")
+		  sys.exit(1)
 
     def show_version(self):
-            self.cur.execute("SELECT VERSION()")
-            print "Database version : %s " % self.cur.fetchone()
+	self.cur.execute("SELECT VERSION()")
+	print ("Database version : %s " % self.cur.fetchone())
 
     def test1(self):
         # Do something with self.con or self.cur
@@ -70,7 +70,7 @@ if __name__ == '__main__':  # If it's executed like a script (not imported)
 
     # output
     for record in result:
-        print record[1]
+        print (record[1])
 
 
 

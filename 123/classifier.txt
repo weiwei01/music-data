@@ -76,3 +76,129 @@ relaxed        0    368      228    1      597
 sad           25    374        6  199      604
 __all__      287   1869      237  202     2595
 
+classifier
+Predicted  angry  happy  relaxed  sad  __all__
+Actual                                        
+angry        262    310        2    1      575
+happy          0    817        1    1      819
+relaxed        0    368      228    1      597
+sad           25    374        6  199      604
+__all__      287   1869      237  202     2595
+
+classifier
+Predicted  angry  happy  relaxed  sad  __all__
+Actual                                        
+angry        375    197        1    2      575
+happy          1    816        1    1      819
+relaxed        0    257      339    1      597
+sad           50    268       19  267      604
+__all__      426   1538      360  271     2595
+
+classifier
+Predicted  angry  happy  relaxed  sad  __all__
+Actual                                        
+angry        494     73        5    3      575
+happy         15    779       24    1      819
+relaxed        6    127      462    2      597
+sad          136     90       54  324      604
+__all__      651   1069      545  330     2595
+
+classifier
+Predicted  angry  happy  relaxed  sad  __all__
+Actual                                        
+angry        262    310        2    1      575
+happy          0    817        1    1      819
+relaxed        0    368      228    1      597
+sad           25    374        6  199      604
+__all__      287   1869      237  202     2595
+
+classifier
+Predicted  angry  happy  relaxed  sad  __all__
+Actual                                        
+angry        262    310        2    1      575
+happy          0    817        1    1      819
+relaxed        0    368      228    1      597
+sad           25    374        6  199      604
+__all__      287   1869      237  202     2595
+
+classifier
+Predicted  angry  happy  relaxed  sad  __all__
+Actual                                        
+angry        375    197        1    2      575
+happy          1    816        1    1      819
+relaxed        0    257      339    1      597
+sad           50    268       19  267      604
+__all__      426   1538      360  271     2595
+
+classifier
+Predicted  angry  happy  relaxed  sad  __all__
+Actual                                        
+angry        262    310        2    1      575
+happy          0    817        1    1      819
+relaxed        0    368      228    1      597
+sad           25    374        6  199      604
+__all__      287   1869      237  202     2595
+
+classifier
+Predicted  angry  happy  relaxed  sad  __all__
+Actual                                        
+angry         62    430       33   37      562
+happy         51    642       64   46      803
+relaxed       45    441       69   30      585
+sad           52    453       26   66      597
+__all__      210   1966      192  179     2547
+
+classifier
+Predicted  angry  happy  relaxed  sad  __all__
+Actual                                        
+angry         62    430       33   37      562
+happy         51    642       64   46      803
+relaxed       45    441       69   30      585
+sad           52    453       26   66      597
+__all__      210   1966      192  179     2547
+
+classifier
+Predicted  angry  happy  relaxed  sad  __all__
+Actual                                        
+angry        102    360       48   52      562
+happy         85    561       96   61      803
+relaxed       73    378       97   37      585
+sad           91    374       50   82      597
+__all__      351   1673      291  232     2547
+
+classifier
+Predicted  angry  happy  relaxed  sad  __all__
+Actual                                        
+angry        186    223       89   64      562
+happy        154    404      169   76      803
+relaxed      121    255      163   46      585
+sad          158    227      105  107      597
+__all__      619   1109      526  293     2547
+
+classifier
+Predicted  angry  happy  relaxed  sad  __all__
+Actual                                        
+angry        191    209       93   69      562
+happy        165    379      176   83      803
+relaxed      141    226      170   48      585
+sad          176    203      111  107      597
+__all__      673   1017      550  307     2547
+
+classifier
+Predicted  angry  happy  relaxed  sad  __all__
+Actual                                        
+angry        184    226       90   62      562
+happy        171    392      169   71      803
+relaxed      128    251      162   44      585
+sad          161    233      104   99      597
+__all__      644   1102      525  276     2547
+
+classifier
+Predicted  angry  happy  relaxed  sad  __all__
+Actual                                        
+angry        174    155      103  130      562
+happy        136    319      189  159      803
+relaxed      112    192      178  103      585
+sad          138    160      105  194      597
+__all__      560    826      575  586     2547
+

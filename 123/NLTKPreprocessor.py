@@ -4,8 +4,12 @@ news = fetch_20newsgroups(subset='all')
 
 import pandas
 
-news = pandas.read_csv("stock.csv", sep=",")
+news = pandas.read_csv("stock_half.csv", sep=",")
+target = news['mood']
+text = news['firstpart']
 
+fixed_text = text[pandas.notnull(text)]
+fixed_target = target[pandas.notnull(text)]
 
 print (len(news.lyrics))
 # 18846
@@ -16,7 +20,6 @@ print (len(news.mood))
 print (news.mood)
 # ['alt.atheism', 'comp.graphics', 'comp.os.ms-windows.misc', 'comp.sys.ibm.pc.hardware', 'comp.sys.mac.hardware', 'comp.windows.x', 'misc.forsale', 'rec.autos', 'rec.motorcycles', 'rec.sport.baseball', 'rec.sport.hockey', 'sci.crypt', 'sci.electronics', 'sci.med', 'sci.space', 'soc.religion.christian', 'talk.politics.guns', 'talk.politics.mideast', 'talk.politics.misc', 'talk.religion.misc']
  
-
 
 
 '''
@@ -59,9 +62,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from pandas_ml import ConfusionMatrix
-
-import sys
-import pstats
 def crossValidation(classifier, X, y):
 	predicted = cross_validation.cross_val_predict(classifier, X, y, cv=10)
 	print("10-f-cv")
@@ -88,9 +88,9 @@ trial1 = Pipeline([
     ('vectorizer', TfidfVectorizer()),
     ('classifier', MultinomialNB()),
 ])
-train(trial1, news.lyrics, news.mood)
+train(trial1, fixed_text, fixed_target)
 # Accuracy: 0.846349745331
-crossValidation(trial1, news.lyrics, news.mood)
+crossValidation(trial1, fixed_text, fixed_target)
 
 from nltk.corpus import stopwords
  
@@ -99,9 +99,9 @@ trial2 = Pipeline([
     ('classifier', MultinomialNB()),
 ])
  
-train(trial2, news.lyrics, news.mood)
+train(trial2, fixed_text, fixed_target)
 # Accuracy: 0.877546689304
-crossValidation(trial2, news.lyrics, news.mood)
+crossValidation(trial2, fixed_text, fixed_target)
 
 
 trial3 = Pipeline([
@@ -109,9 +109,9 @@ trial3 = Pipeline([
     ('classifier', MultinomialNB(alpha=0.05)),
 ])
  
-train(trial3, news.lyrics, news.mood)
+train(trial3, fixed_text, fixed_target)
 # Accuracy: 0.909592529711
-crossValidation(trial3, news.lyrics, news.mood)
+crossValidation(trial3, fixed_text, fixed_target)
 
 
 
@@ -122,9 +122,9 @@ trial4 = Pipeline([
     ('classifier', MultinomialNB(alpha=0.05)),
 ])
  
-train(trial4, news.lyrics, news.mood)
+train(trial4, fixed_text, fixed_target)
 # Accuracy: 0.903013582343
-crossValidation(trial4, news.lyrics, news.mood)
+crossValidation(trial4, fixed_text, fixed_target)
 
 
 
@@ -142,9 +142,9 @@ trial5 = Pipeline([
     ('classifier', MultinomialNB(alpha=0.05)),
 ])
  
-train(trial5, news.lyrics, news.mood)
+train(trial5, fixed_text, fixed_target)
 # Accuracy: 0.910653650255
-crossValidation(trial5, news.lyrics, news.mood)
+crossValidation(trial5, fixed_text, fixed_target)
 
 
 from sklearn.svm import LinearSVC
@@ -154,9 +154,9 @@ trial6 = Pipeline([
     ('classifier', LinearSVC()),
 ])
 
-train(trial6, news.lyrics, news.mood)
+train(trial6, fixed_text, fixed_target)
 # Accuracy: 0.903013582343
-crossValidation(trial6, news.lyrics, news.mood)
+crossValidation(trial6, fixed_text, fixed_target)
 
 
 
